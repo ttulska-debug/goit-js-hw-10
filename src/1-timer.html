@@ -4,25 +4,53 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page 2</title>
+    <title>Timer</title>
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script type="module" src="./js/1-timer.js"></script>
   </head>
-  <body>
-    <load
-      src="./partials/header.html"
-      icon-path="./img/sprite.svg#logo"
-      highlight-act="active"
-    />
 
-    <main>
-      <div class="container">
-        <h1 class="main-title">
-          <span class="main-title-gradient">Welcome</span> to page 2
-        </h1>
-        <load src="./partials/back-link.html" />
-      </div>
+  <body>
+    <div class="container-main-timer">
+          <h1 class="main-title">Timer</h1>
+    </div>
+
+    <section class="timer-section">
+        <div class="container-timer">
+          <div class="timer-controls">
+            <input type="text" id="datetime-picker" />
+
+            <button type="button" data-start disabled>Start</button>
+          </div>
+
+          <div class="timer">
+            <div class="field">
+              <span class="value" data-days>00</span>
+              <span class="label">Days</span>
+            </div>
+
+            <div class="field">
+              <span class="value" data-hours>00</span>
+              <span class="label">Hours</span>
+            </div>
+
+            <div class="field">
+              <span class="value" data-minutes>00</span>
+              <span class="label">Minutes</span>
+            </div>
+
+            <div class="field">
+              <span class="value" data-seconds>00</span>
+              <span class="label">Seconds</span>
+            </div>
+          </div>
+          
+          <a class="back-link" href="./index.html">Go back</a>
+        </div>
+      </section>
+
     </main>
 
-    <load src="./partials/footer.html" />
   </body>
 </html>
