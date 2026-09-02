@@ -14,6 +14,7 @@ const secondsValue = document.querySelector('[data-seconds]');
 
 let userSelectedDate = null;
 let timerId = null;
+startButton.disabled = true;
 
 const options = {
   enableTime: true,
@@ -72,7 +73,7 @@ function updateTimer() {
 
     timerId = null;
 
-    updateTimerDisplay(0);
+   updateTimerDisplay(convertMs(0));
 
     datetimePicker.disabled = false;
     startButton.disabled = true;
